@@ -35,14 +35,23 @@ const memberListEl = document.getElementById("member-list");
 
 for(let i = 0; i < members.length; i++) {
     console.log("Membro " + i + ":");
+
     const newLiEl = document.createElement("li");
     newLiEl.classList.add("member");
     newLiEl.innerText = "Membro " + i + ":";
 
     for(let key in members[i]) {
         console.log(key + ": " + members[i][key]);
-        const newDivEl = document.createElement("div");
-        newDivEl.innerText = key + ": " + members[i][key];
+
+        let newDivEl;
+        if(key == "photo") {
+            newDivEl = document.createElement("img");
+            newDivEl.src = members[i][key];
+        }
+        else {
+            newDivEl = document.createElement("div");
+            newDivEl.innerText = key + ": " + members[i][key];
+        }
 
         newLiEl.append(newDivEl);
     }
