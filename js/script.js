@@ -38,7 +38,6 @@ for(let i = 0; i < members.length; i++) {
 
     const newLiEl = document.createElement("li");
     newLiEl.classList.add("member");
-    newLiEl.innerText = "Membro " + i + ":";
 
     for(let key in members[i]) {
         console.log(key + ": " + members[i][key]);
@@ -50,7 +49,8 @@ for(let i = 0; i < members.length; i++) {
         }
         else {
             newDivEl = document.createElement("div");
-            newDivEl.innerText = key + ": " + members[i][key];
+            newDivEl.classList.add("." + key);
+            newDivEl.innerText = members[i][key];
         }
 
         newLiEl.append(newDivEl);
