@@ -31,4 +31,9 @@ let members = [
     }
 ];
 
-console.log(members);
+for(let i = 0; i < members.length; i++) {
+    console.log("Membro " + i + ":");
+    for(let key in members[i]) {
+        console.log(key + ": " + members[i][key]);
+    }
+}
