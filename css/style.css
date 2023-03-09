@@ -5,12 +5,25 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #f5f5f1;
     font-family: sans-serif;
+    
+    color: #6f6963;
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+
+    color: #524c47;
+    font-size: 1.2rem;
+}
+
+p {
+    width: 60%;
+    margin-bottom: 1.5rem;
+
+    font-size: .9rem;
+    line-height: 2rem;
 }
 
 ul {
@@ -21,6 +34,11 @@ ul {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    padding: 50px 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 
     text-align: center;
 }
@@ -39,17 +57,26 @@ ul {
     flex-flow: column nowrap;
 }
 
-#member-list .member > * {
-    margin-bottom: .5rem;
-}
-
 #member-list .member > div {
     order: 1;
+}
+
+#member-list .member .name {
+    margin-bottom: .3rem;
+
+    font-family: serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+#member-list .member .role {
+    margin-bottom: 1rem;
 }
 
 #member-list .member img {
     width: 100%;
     height: auto;
+    margin-bottom: 1rem;
 
     order: 0;
 }
