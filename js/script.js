@@ -49,7 +49,7 @@ for(let i = 0; i < members.length; i++) {
         }
         else {
             newDivEl = document.createElement("div");
-            newDivEl.classList.add("." + key);
+            newDivEl.classList.add(key);
             newDivEl.innerText = members[i][key];
         }
 
